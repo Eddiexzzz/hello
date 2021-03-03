@@ -1,6 +1,18 @@
-basic.forever(function () {
+input.onButtonPressed(Button.A, function () {
     basic.showString("Hello!")
-    basic.pause(500)
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.showLeds(`
+        # . # . #
+        . # . # .
+        # . # . #
+        . # . # .
+        # . # . #
+        `)
+})
+input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Happy)
-    basic.pause(500)
+})
+input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
 })
