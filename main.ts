@@ -1,18 +1,10 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showString("Hello!")
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showLeds(`
-        # . # . #
-        . # . # .
-        # . # . #
-        . # . # .
-        # . # . #
-        `)
+    variable += 1
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showIcon(IconNames.Happy)
+    variable += -1
 })
-input.onGesture(Gesture.Shake, function () {
-    basic.clearScreen()
+let variable = 0
+basic.forever(function () {
+    basic.showNumber(variable)
 })
